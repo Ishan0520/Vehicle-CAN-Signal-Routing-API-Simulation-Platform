@@ -1,0 +1,94 @@
+{
+  "_comment": "Feature map: feature names to CAN signal definitions",
+  "_version": "1.0.0",
+
+  "unlock_door": {
+    "description": "Unlock all doors",
+    "message_name": "DOOR_CONTROL",
+    "signal_name": "DOOR_LOCK_CMD",
+    "value_map": {"0": 0, "1": 1, "2": 2},
+    "default_value": 0,
+    "value_description": "0=unlock, 1=lock, 2=double-lock"
+  },
+
+  "lock_door": {
+    "description": "Lock all doors",
+    "message_name": "DOOR_CONTROL",
+    "signal_name": "DOOR_LOCK_CMD",
+    "value_map": {},
+    "default_value": 1,
+    "value_description": "0=unlock, 1=lock, 2=double-lock"
+  },
+
+  "set_window": {
+    "description": "Control door windows",
+    "message_name": "DOOR_CONTROL",
+    "signal_name": "DOOR_WINDOW_CMD",
+    "value_map": {"0": 0, "1": 1, "2": 2},
+    "default_value": 0,
+    "value_description": "0=closed, 1=open, 2=half-open"
+  },
+
+  "set_temperature": {
+    "description": "Set cabin target temperature",
+    "message_name": "CLIMATE_CONTROL",
+    "signal_name": "CABIN_TEMP_SET",
+    "value_map": {},
+    "default_value": 22.0,
+    "value_description": "Temperature in degrees C, range 15.0 to 35.0"
+  },
+
+  "set_ac": {
+    "description": "Enable or disable air conditioning",
+    "message_name": "CLIMATE_CONTROL",
+    "signal_name": "AC_ENABLE",
+    "value_map": {"0": 0, "1": 1},
+    "default_value": 0,
+    "value_description": "0=off, 1=on"
+  },
+
+  "set_fan_speed": {
+    "description": "Set cabin fan speed",
+    "message_name": "CLIMATE_CONTROL",
+    "signal_name": "FAN_SPEED",
+    "value_map": {},
+    "default_value": 0,
+    "value_description": "Integer 0 to 10"
+  },
+
+  "start_charging": {
+    "description": "Start battery charging",
+    "message_name": "BMS_CONTROL",
+    "signal_name": "CHARGE_ENABLE",
+    "value_map": {},
+    "default_value": 1,
+    "value_description": "0=stop, 1=start"
+  },
+
+  "stop_charging": {
+    "description": "Stop battery charging",
+    "message_name": "BMS_CONTROL",
+    "signal_name": "CHARGE_ENABLE",
+    "value_map": {},
+    "default_value": 0,
+    "value_description": "0=stop, 1=start"
+  },
+
+  "set_charge_limit": {
+    "description": "Set maximum charge current",
+    "message_name": "BMS_CONTROL",
+    "signal_name": "CHARGE_CURRENT_LIMIT",
+    "value_map": {},
+    "default_value": 32.0,
+    "value_description": "Current in Amps, range 0 to 100"
+  },
+
+  "request_soc": {
+    "description": "Request battery state-of-charge report",
+    "message_name": "BMS_CONTROL",
+    "signal_name": "SOC_REQUEST",
+    "value_map": {},
+    "default_value": 1,
+    "value_description": "1=request SOC"
+  }
+}
